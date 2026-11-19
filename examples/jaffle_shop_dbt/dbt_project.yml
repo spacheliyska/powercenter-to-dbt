@@ -1,0 +1,5 @@
+name: pwc_converted
+version: "1.0.0"
+config-version: 2
+profile: pwc_converted
+model-paths: ["models"]

@@ -1,0 +1,16 @@
+node_modules/
+*.duckdb
+*.duckdb.wal
+
+# dbt artifacts, if the generated project is run
+target/
+dbt_packages/
+logs/
+.user.yml
+
+# local / editor / OS files
+.env
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

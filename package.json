@@ -1,0 +1,28 @@
+{
+  "name": "pwc2dbt",
+  "version": "0.1.0",
+  "description": "Convert Informatica PowerCenter mapping XML exports into dbt models",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "convert": "node src/cli.ts",
+    "convert:example": "node src/cli.ts examples/FLOWLINE_DEMO_JAFFLESHOP.xml --out examples/jaffle_shop_dbt",
+    "test": "vitest run --exclude test/performance.test.ts && vitest run test/performance.test.ts",
+    "test:scale": "vitest run test/scale.test.ts && vitest run test/performance.test.ts",
+    "bench": "vitest bench --run --reporter=verbose",
+    "typecheck": "tsc"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@duckdb/node-api": "^2.0.0-r.1",
+    "@types/node": "^24.19.2",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.1"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^5.12.1"
+  }
+}
